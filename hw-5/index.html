@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homework</title>
+</head>
+<body>
+  <header>
+    <div class="controller-wrapper">
+      <div class="controller-wrapper__block">
+        <select class="select-fetcher">
+          <option value="XML">XMLHTTPRequest</option>
+          <option value="Fetch">Fetch</option>
+        </select>
+      </div>
+      <div class="controller-wrapper__block">        <h2 class="title">GET</h2><button class="controller-wrapper__get-data-button">display tasks</button></div>
+      <div class="controller-wrapper__block">
+        <h2 class="title">POST</h2>
+        <form class="add-form form">
+          <input name="name" required placeholder="Task Title" type="text" />
+          <input name="info" required placeholder="Task Info" type="text" />
+          <div>
+            <label for="isImportant">Is task important?</label>
+            <input type="checkbox" name="importance" id="isImportant" />
+          </div>
+          <div>
+            <label for="isCompleted">Is task completed?</label>
+            <input type="checkbox" name="completion" id="isCompleted" />
+          </div>
+          <button type="submit" class="add-form__button">add task</button>
+        </form>
+      </div>
+      <div class="controller-wrapper__block">
+        <h2 class="title">PUT</h2>
+        <form class="change-form form">
+          <input name="id" required placeholder="Task ID" type="text" />
+          <input name="name" required placeholder="Change Task Title" type="text" />
+          <input name="info" required placeholder="Change Task Info" type="text" />
+          <div>
+            <label for="isStillImportant">Is task still important?</label>
+            <input type="checkbox" name="importance" id="isStillImportant" />
+          </div>
+          <div>
+            <label for="isStillCompleted">Is task completed yet?</label>
+            <input type="checkbox" name="completion" id="isStillCompleted" />
+          </div>
+          <button class="change-form__button">change task</button>
+        </form>
+      </div>
+      <div class="controller-wrapper__block">
+        <h2 class="title">PATCH</h2>
+        <form class="change-partially-form form">
+          <input name="id" required placeholder="Task ID" type="text" />
+          <input name="info" required placeholder="Change Task Info" type="text" />
+          <button class="change-partially-form__button">change task info</button>
+        </form>
+      </div>
+      <div class="controller-wrapper__block">
+        <form class="delete-form form">
+          <h2 class="title">DELETE</h2>
+          <input name="id" required placeholder="Task id to delete" type="text" />
+          <button type="submit" class="delete-form__button">delete task</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <ol class="task-list">
+      <h3>Choose one of the fetchers in the selector above, then do the operation needed. Actions are also described in console.</h3>
+    </ol>
+  </main>
+</body>
+<script src="/lib/index.js" type="module"></script>
+<script src="/lib/fetchApi.js" type="module"></script>
+<script src="/lib/controller.js" type="module"></script>
+<script src="/lib/xmlHTTP.js" type="module"></script>
+</html>

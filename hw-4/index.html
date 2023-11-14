@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <header>
+      <div class="controller-wrapper">
+        <select class="select">
+          <option value="XML">XMLHTTPRequest</option>
+          <option value="Fetch">Fetch</option>
+        </select>
+        <button class="get-data-button">display tasks</button>
+        <form class="add-form form">
+          <input name="name" required placeholder="Task Title" class="add-input" type="text" />
+          <input name="info" required placeholder="Task Info" class="add-input" type="text" />
+          <div>
+            <label for="isImportant">Is task important?</label>
+            <input type="checkbox" name="importance" id="isImportant" />
+          </div>
+          <div>
+            <label for="isCompleted">Is task completed?</label>
+            <input type="checkbox" name="completion" id="isCompleted" />
+          </div>
+          <button type="submit" class="add-data-button">add task</button>
+        </form>
+        <form class="change-form form">
+          <input name="id" required placeholder="Task ID" class="change-input" type="text" />
+          <input name="name" required placeholder="Change Task Title" class="change-input" type="text" />
+          <input name="info" required placeholder="Change Task Info" class="change-input" type="text" />
+          <div>
+            <label for="isStillImportant">Is task still important?</label>
+            <input type="checkbox" name="importance" id="isStillImportant" />
+          </div>
+          <div>
+            <label for="isStillCompleted">Is task completed yet?</label>
+            <input type="checkbox" name="completion" id="isStillCompleted" />
+          </div>
+          <button class="change-data-button">change task</button>
+        </form>
+        <form class="change-partially-form form">
+          <input name="id" required placeholder="Task ID" class="change-partially-input" type="text" />
+          <input name="info" required placeholder="Change Task Info" class="change-input" type="text" />
+          <button class="change-info-button">change task info</button>
+        </form>
+        <form class="delete-form form">
+          <input name="id" required placeholder="Task id to delete" class="delete-input" type="text" />
+          <button type="submit" class="delete-data-button">delete task</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <ol class="list">
+        <p>Click buttons to show data.</p>
+      </ol>
+    </main>
+  </body>
+  <script src="index.js" type="module"></script>
+  <script src="controller.js" type="module"></script>
+  <script src="fetchApi.js" type="module"></script>
+  <script src="xmlHTTP.js" type="module"></script>
+</html>

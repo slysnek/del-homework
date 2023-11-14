@@ -1,0 +1,54 @@
+.logo {
+  background-color: var(--bg-logo);
+  grid-area: logo;
+}
+
+.logo-icons {
+  background-color: var(--bg-logo);
+  grid-area: logo-2;
+}
+
+.pic-girl-1 {
+  background-color: var(--bg-green);
+  grid-area: pic-girl-1;
+}
+
+.pic-girl-2 {
+  background-color: var(--bg-blue);
+  grid-area: pic-girl-2;
+}
+
+.pic-girl-3 {
+  background-color: var(--bg-green);
+  grid-area: pic-girl-3;
+}
+
+.pic-door {
+  background-color: var(--bg-door);
+  grid-area: pic-door;
+}
+
+.pic-red {
+  background-color: var(--bg-red);
+  grid-area: pic-red;
+}
+
+.text {
+  background-color: var(--bg-text);
+  grid-area: text;
+}
+
+.pic-coffee {
+  background-color: var(--bg-coffee);
+  grid-area: pic-coffee;
+}
+
+.pic-brown {
+  background-color: var(--bg-brown);
+  grid-area: pic-brown;
+}
+
+.pic-man {
+  background-color: var(--bg-green);
+  grid-area: pic-man;
+}
